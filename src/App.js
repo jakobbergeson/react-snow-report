@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Form from "./components/Form";
+import Conditions from "./components/Conditions";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -62,16 +63,19 @@ class App extends Component {
       });
     } else {
       this.setState({
+        resort: undefined,
         error: true,
       });
       alert("Please enter a resort in California");
     }
+    console.log(this.state.resort);
   };
   render() {
     return (
       <Wrapper>
         <Content>
-          <Form resort={this.state.resort} getReport={this.getReport}></Form>
+          <Form resort={this.state.resort} getReport={this.getReport} />
+          <Conditions resort={this.state.resort} />
         </Content>
       </Wrapper>
     );

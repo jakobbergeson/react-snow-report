@@ -55,7 +55,7 @@ class App extends Component {
       );
 
       const sheet = await api_call.json();
-
+      // Will only work if input is "Mammoth" for the time being
       console.log(sheet);
 
       this.setState({

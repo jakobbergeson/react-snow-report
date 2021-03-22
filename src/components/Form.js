@@ -64,7 +64,7 @@ class Form extends Component {
   render() {
     return (
       <div>
-        {!this.props.report && (
+        {!this.props.resort && (
           <FormDiv onSubmit={this.props.getReport}>
             <h1>Snow Report</h1>
             <InputDiv>
